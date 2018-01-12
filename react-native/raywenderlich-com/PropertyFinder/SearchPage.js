@@ -62,7 +62,9 @@ export default class SearchPage extends Component<{}> {
   _handleResponse = (response) => {
     this.setState({ isLoading: false , message: '' });
     if (response.application_response_code.substr(0, 1) === '1') {
-      this.setState({ message: 'Properties found: ' + response.listings.length});
+      this.props.navigation.navigate(
+        'Results', {listings: response.listings}
+      );
     } else {
       this.setState({ message: 'Location not recognized; please try again.'});
     }
