@@ -46,3 +46,60 @@ repeat {
 } while anotherCounter < 10
 
 print("After \(anotherCounter) rolls, roll is \(roll)")
+
+// Challenges
+
+// 1. Wrong Scope
+let firstName = "Matt"
+
+if firstName == "Matt" {
+    let lastName = "Galloway"
+} else if firstName == "Ray" {
+    let lastName = "Wenderlich"
+}
+// let fullName = firstName + " " + lastName
+
+// 2. Invalid redeclaration
+// let answer = true && true
+// let answer = false || false
+// let answer = (true && 1 != 2) || (4 > 3 && 100 < 1)
+// let answer = ((10 / 2) > 3) && ((10 % 2) == 0)
+
+// 3. Breaking out of a loop
+let number = 1024
+
+// 4. Repeat-while loops
+var j = 0
+
+repeat {
+    print(pow(2, j))
+    j += 1
+} while j < 10
+
+// 4. Fibonnaci
+let nFibonacci = 13
+var fibonacciOne = 0
+var fibonacciTwo = 1
+var nextFibonacci = 0
+var fibonacciCounter = 2
+
+while fibonacciCounter < nFibonacci {
+    nextFibonacci = fibonacciOne + fibonacciTwo
+    fibonacciOne = fibonacciTwo
+    fibonacciTwo = nextFibonacci
+    fibonacciCounter += 1
+}
+
+print("The \(nFibonacci)th fibonacci number is \(nextFibonacci)")
+
+// 5. Factorial
+let nNumber = 5
+var numberFactorial = 1
+var factorialCounter = 1
+
+while factorialCounter <= nNumber {
+    numberFactorial *= factorialCounter
+    factorialCounter += 1
+}
+
+print("Factorial of \(nNumber) number is \(numberFactorial)")
