@@ -81,5 +81,19 @@ func randomized(_ array: [Int]) -> [Int] {
     }
     return randomArray
 }
-
 randomized(scores)
+
+// 6. MinMax
+// scores = [1,2,2,5,8,5,8,7,2]
+func minMax(of numbers: [Int]) -> (min: Int, max: Int)? {
+    var minMax = (min: numbers[0], max: numbers[0])
+    for (_, number) in numbers.enumerated() {
+        if number > minMax.max {
+            minMax.max = number
+        } else if number < minMax.min {
+            minMax.min = number
+        }
+    }
+    return minMax
+}
+minMax(of: scores)
