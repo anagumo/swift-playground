@@ -96,4 +96,70 @@ func minMax(of numbers: [Int]) -> (min: Int, max: Int)? {
     }
     return minMax
 }
-minMax(of: scores)
+minMax(of: scores) // It prints (min 1, max 8)
+
+// Dictionaries
+// 1. Valid statements
+//let dict1: [Int, Int] = [:] -> Wrong syntaxis
+//let dict2 = [:] -> Missing type
+let dict3: [Int: Int] = [:]
+
+// 2. Valid statements
+let dict4 = ["One": 1, "Two": 2, "Three": 3]
+//dict4[1] -> wrong value type
+dict4["One"]
+//dict4["Zero"] = 0 -> Cannot add a new pair to an inmutable dictionary
+//dict4[0] = "Zero" -> wrong value type
+
+// 3. Iterating throug dictionaries
+var dict5 = ["NY": "New York", "CA": "California"]
+dict5["NY"]
+dict5["WA"] = "Washington"
+dict5["CA"] = nil
+dict5["MX"] = "Mexico"
+
+func printLocations(of locations: [String: String]) {
+    for (key, value) in locations {
+        if value.count > 8 {
+            print("\(key), \(value)")
+        }
+    }
+}
+printLocations(of: dict5) // It prints "WA, Washington"
+
+// 4. Mergin dictionaries
+let playlist1 = ["Chelsea Wolfe": "Hypnos", "Gorillaz": "Busted and Blue"]
+var playlist2 = ["The National": "England", "Chelsea Wolfe": "Movie Screen"]
+func merging(_ dict1: [String: String], with dict2: [String: String]) -> [String: String] {
+    var playlist: [String: String] = [:]
+    for (artist, song) in dict1 {
+        playlist[artist] = song
+    }
+    for (artist, song) in dict2 {
+        playlist[artist] = song
+    }
+    return playlist
+}
+merging(playlist1, with: playlist2) // It prints ["The National": "England", "Chelsea Wolfe": "Movie Screen", "Gorillaz": "Busted and Blue"]
+
+// 5. Updating values
+let text = "hello"
+func occurrencesOfCharacters(in text: String) -> [Character: Int]{
+    var ocurrences: [Character: Int] = [:]
+    for char in text.lowercased() {
+        if let times = ocurrences[char] {
+            ocurrences.updateValue(times + 1, forKey: char)
+        } else {
+            ocurrences[char] = 1
+        }
+    }
+    return ocurrences
+}
+occurrencesOfCharacters(in: text) // It prints ["e": 1, "o": 1, "l": 2, "h": 1]
+
+// 6. Removing pairs
+var nameTitleLookup: [String: String?] = ["Mary": "Engineer", "Patrick": "Intern", "Ray": "Hacker"]
+nameTitleLookup.updateValue(nil, forKey: "Patrick")
+nameTitleLookup["Ray"] = nil
+
+nameTitleLookup // It prints ["Mary": {some "Engineer"}, "Patrick": nil]
