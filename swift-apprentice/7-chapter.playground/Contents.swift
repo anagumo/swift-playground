@@ -163,3 +163,15 @@ nameTitleLookup.updateValue(nil, forKey: "Patrick")
 nameTitleLookup["Ray"] = nil
 
 nameTitleLookup // It prints ["Mary": {some "Engineer"}, "Patrick": nil]
+
+// Sets
+// 1. Uniqueness
+let someDictionary = ["one": 1, "two": 2, "three": 3, "anotherTwo": 2]
+func isInvertible(_ dictionary: [String: Int]) -> Bool {
+    var someSet: Set<Int> = []
+    for value in dictionary.values where !someSet.insert(value).inserted {
+        return false
+    }
+    return true
+}
+isInvertible(someDictionary) // It prints false
