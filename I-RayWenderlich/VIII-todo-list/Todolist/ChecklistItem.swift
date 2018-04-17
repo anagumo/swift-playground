@@ -8,11 +8,17 @@
 
 import Foundation
 
-class TodolistItem {
-    let todo: String
-    let completed: Bool = false
+class TodolistItem: NSObject {
+    var todo: String
+    var completed: Bool
     
-    init(todo: String) {
+    init(todo: String, completed: Bool) {
         self.todo = todo
+        self.completed = completed
     }
+    
+    func toggleChecked() {
+        completed = !completed
+    }
+    
 }

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Todolist
 //
-//  Created by Ariana Santillán on 26/03/18.
+//  Created by Ariana on 26/03/18.
 //  Copyright © 2018 Haiku Coding Club. All rights reserved.
 //
 
