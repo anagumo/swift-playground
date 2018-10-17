@@ -2,4 +2,8 @@
 
 ### Updated to Swift 4.2 and iOS 12
 #### The Basics
-* 1. Expressions, Variables & Constants
+* Expressions, Variables & Constants
+* Types & Operations
+
+### Apps in progress...
+* Todolists
