@@ -2,7 +2,7 @@
 
 ### Updated to Swift 4.2 and iOS 12
 #### The Basics
-* Expressions, Variables & Constants
+* Naming data: Variables & Constants
 * Types & Operations
 
 ### Apps in progress...
