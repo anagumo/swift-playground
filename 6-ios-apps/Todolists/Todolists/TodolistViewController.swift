@@ -13,6 +13,7 @@ class TodolistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view, typically from a nib.
         let item1 = TodolistItem()
         item1.text = "Run 5K"
@@ -66,6 +67,24 @@ class TodolistViewController: UITableViewController {
             cell.accessoryType = .none
         }
     }
-
+    
+    // Delete Items
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    // MARK: - Actions
+    @IBAction func addITem() {
+        let newRowIndex = items.count
+        let item = TodolistItem()
+        item.text = "Finish this fucking app"
+        items.append(item)
+        // There isn't a notiftyDataSetChanged magic, we need to add new rows to both the data model and table view
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+    
 }
 
