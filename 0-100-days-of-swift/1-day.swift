@@ -1,40 +1,34 @@
 import UIKit
 
-// 1. Variables
-var greeting = "Hello, world!"
-greeting = "Goodbye, cruel world!"
+// Variables
+var str = "Hello, playground"
 
-// greeting = 3 error: cannot assign value of type 'Int' to type 'String'
+str = "Ahoy, playground" // Value changes
 
-// 2. Type safe language
-var name = "Ariana"
-var age = 29
-var bookPrice = 1_000
+// Basic types - Type Safety
+var myAge = 38
+// myAge = "Treinta y ocho" // Types cannot be mixed
+var price = 10_000 // Use separators for more readeble numbers
 
-// Combine types with string interpolation
+var poem = """
+Mil pequeños peces blancos,
+como si hirviera \
+el color del agua
+""" // Multiple strings
 
-// 3. Multi-line strings
-var haiku = """
-Mil pequeños peces blancos
-Como si hirviera \
-El color del agua
-"""
+var area = 34.5 // Fraccional numbers, but different of floats
+var isVisible = true // Only two values
 
-// Include \ to format
+// Combine variables to make them more useful
+var myName = "Ariana"
+print("My name is \(myName) and I'm \(myAge) years old")
 
-/* 4. Doubles and Booleans
- Double by default and precision of a Double compared with Float
- */
-var area = 3.5
-var isFebruary = true
+// Constants
+let pi = 3.1416 // They never change
 
-// 6. String interpolation - place variables inside a string
-var numberOfDays = 100
-var marathon = "This Swift marathon lasts \(numberOfDays) days"
+// Type inference and type annotations
+let record: String = "The Grime and the Glow by Chelsea Wolfe"
+let songs: Int = 13
+let duration: Double = 1.5
+let isAvailable: Bool = true
 
-// 7. Constants - Variables can vary but constants noooo
-let pi = 3.14159
-
-// 8. Type Annotations - Be explicit about the type of your data
-let year: Int = 1989
-let lastName: String = "Nagumo"
