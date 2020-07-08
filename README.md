@@ -1,11 +1,9 @@
 ## Swift Playground
 
-### Updated to Swift 4.2 and iOS 12
-#### The Basics
-* Naming data: Variables & Constants
-* Types & Operations
+### Updated to Swift 5.2 and iOS 13
 
-#### 100 Days Of Swift Playgrounds
-* Day 1: Variables, simple data types and string interpolation
-* Day 2: Arrays, dictionaries, sets and enums
-* Day 3: operators and conditions
+Year 2020 - Week 28
+#### Dev Launchpad
+* Swift Language Basics - Types, Variables, and Functions
+* Swift Language Basics - Control Flow, Operators, and Optionals
+* Swift Language Basics - Classes & Structs
