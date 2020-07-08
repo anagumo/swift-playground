@@ -24,7 +24,7 @@ let isTeneeger = true
 /** Type Safe
  Swift is a safety language because you cannot mix types, if you declare a variable as Int, it is not possible re assign a value with a different type */
 var a: Double = 34
-// a = "Pitágoras" -> Cannot assign value of type 'String' to type 'Int'
+// a = "Pitágoras" -> Cannot assign value of type 'String' to type 'Double'
 
 /** Type Inference
  This is a great feature of Swift because is not necessary difine the type of our variables when we create them */
