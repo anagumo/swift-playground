@@ -50,3 +50,26 @@ album.shuffle()
 // Using sets we can get the unique values from an array for example:
 let ages = [23, 56, 90, 23, 18, 45]
 let set = Set(ages)
+
+/** Dictionaries
+ A dictionary is a list of key-value pairs, values that has a label */
+
+var devices: [String: String] = [:]
+devices = [
+    "phone": "iPhone 11",
+    "laptop": "Mac Book Air 13 inches",
+    "tablet": "Kindle"
+]
+
+// Also we can do more usefull dictionaries
+let transactions: [String : [Double]] = [
+    "Jul 6": [190, 43, 224.98, 10, 20, 15],
+    "Jul 7": [55, 86],
+    "Jul 8": [19, 32],
+    "Jul 9": [80, 38, 570, 185, 66]
+]
+
+// If we need to know specific transactions of a day, we use the key:
+transactions["Jul 9"]
+
+// More latter we learn amazing things like how to know how much I spend of certain day :)
