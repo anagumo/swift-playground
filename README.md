@@ -5,8 +5,11 @@
 #### iOS Dev Launchpad
 
 Week 28
-* Swift Language Basics - Types, Variables, and Functions
+* Swift Language Basics, Part 1 - Types, Variables, and Functions
 
 Week 29
-* Swift Language Basics - Control Flow, Operators, and Optionals
-* Swift Language Basics - Classes & Structs
+* Swift Language Basics, Part 2 - Control Flow, Operators, and Optionals
+
+Week 30
+* Swift Language Basics, Part 3 - Classes & Structs
+* iOS Dev Fundamentals - Xcode, UIKit, Autolayout
