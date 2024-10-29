@@ -112,3 +112,46 @@ print("Result is \(justCode): \(statusMessage)")
 
 let httpSuccess = (code: 200, message: "OK")
 print("The code is \(httpSuccess.code)")
+
+// optionals and nil: value or abscence of value
+// in objective-c return nil were able just for objects
+let song = "I need my girl"
+let nilSong = Int(song) // cast fails so we get abscence of value
+let optionalSong: String? = String(song) // this way we could be able to unwrap it
+
+// force unwrapping
+if optionalSong != nil {
+    print("The song is called \(optionalSong!)")
+} else {
+    print("There is no song")
+}
+
+// optional binding: to avoid force values
+if let optionalSong {
+    print("The song is called \(optionalSong)")
+} else {
+    print("There is no song")
+}
+
+// implicit unwrap
+print("The song is called \(optionalSong?.uppercased())")
+
+// try catch: error handling during execution
+enum SandwichError: Error {
+    case missingIngredients([String])
+    case outOfCleanDishes
+}
+
+func makeASandwich() throws {
+    throw SandwichError.missingIngredients(["letuce", "mostaza"])
+}
+
+do {
+    try makeASandwich()
+} catch SandwichError.missingIngredients(let ingredients) {
+    print("Buy these ingredients \(ingredients)")
+} catch SandwichError.outOfCleanDishes {
+    print("Wash dishes")
+}
+
+// assertions(debug) and preconditions(build)
