@@ -9,29 +9,30 @@ import UIKit
 // ámbito global
 let pi = 3.14159
 
-func area(radius: Double) -> Double {
-    /**
-     Calcula el área de un círculo
-     Recibe el radio del mismo
-     No especifica si el radio es una cantidad unsigned
-     */
+func areaCircle(radius: Double) -> Double {
+    """
+    Calcula el área de un círculo a partir de su radio
+    No especifica si el radio es un entero unsigned
+    """
     let pi = 3.14159
     return pi * pow(radius, 2)
 }
-area(radius: 4)
+//area(radius: 4) ¡primera refactorización!
+areaCircle(radius: 4)
 
 func volume(radius: Double) -> Double {
-    /**
-     Calcula el volumen de una esfera
-     Recibe el radio de la misma
-     */
+    """
+    Calcula el volumen de una esfera a partir de su radio
+    No especifica si el radio es un entero unsigned
+    DRY: Crearé una variable pi global para reutilizar su valor
+    """
     return 4/3 * pi * pow(radius, 3)
 }
 volume(radius: 10)
 
 func iva(price: Double) -> Double {
     /**
-     Calcula el iva de una cantidad
+     Calcula el iva a partir de un precio
      No especifica la moneda, lo tomaremos como dólares
      El iva será de un 20% sobre la cantidad
      */
@@ -90,7 +91,7 @@ rectangleArea(base: 2, height: 7)
 func squareArea(side: Double) -> Double {
     /**
      Calcula el area de un cuadrado
-     Usa el pilar DRY de la ciberkinesis
+     Usa el pilar DRY de la ciberkinesis para reutilizar lo que ya tienes
      */
     rectangleArea(base: side, height: side)
 }
@@ -111,7 +112,7 @@ toSeconds(hours: 1, minutes: 30, seconds: 30)
 func rectangleVolume(l1: Double, l2: Double, l3: Double) -> Double {
     /**
      Clacula el vólumen de un prisma rectangular
-     Usa el pilar DRY de la ciberkinesis
+     Usa el pilar DRY de la ciberkinesis para reutilizar lo que ya tienes
      */
     rectangleArea(base: l1, height: l2) * l3
 }
